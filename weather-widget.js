@@ -1,6 +1,6 @@
 ﻿tpwidget("init", {
     "flavor": "bubble",
-    "location": "WSKKEVYQ9QHK",
+    "location": "WSKM4Q76FR2E",
     "geolocation": "disabled",
     "position": "bottom-left",
     "margin": "10px 10px",
