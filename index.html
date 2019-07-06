@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta content="charset=utf-8" http-equiv="X-UA-Compatible" content="webkit">
+<title>( • ̀ω•́ )✧欢迎 - 风铃源</title>
+<link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+<script type="text/javascript">
+var system ={
+win : false,
+mac : false,
+xll : false
+};
+var p = navigator.platform;
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+if(system.win||system.mac||system.xll){
+window.location.href="/fly/index-web.html";
+}else{
+window.location.href="/fly/index-wap.html";
+}
+</script>
+</body>
+</html>
