@@ -17,4 +17,4 @@
   } else {
     T.addEventListener("load", g, false)
   }
-}(window, document, "script", "tpwidget", "https://tp-static.oss-cn-hangzhou.aliyuncs.com/widget/static/js/widget-cc5d550.js"))
+}(window, document, "script", "tpwidget", "https://cdn.sencdn.com/widget/static/js/widget-cc5d550.js"))
