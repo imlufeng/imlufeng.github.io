@@ -3,6 +3,7 @@
     flavor: "bubble",
     location: "WSKM4Q76FR2E",
     geolocation: true,
+    position: "bottom-left",
     language: "zh-Hans",
     unit: "c",
     theme: "auto",
