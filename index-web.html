@@ -19,7 +19,18 @@ p {text-align:center;color:#fff}
 </style>
 <link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300">
 <div id="tp-weather-widget"></div>
-<script type="text/javascript" src="SeniverseWeather.js"></script>
+<script>(function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+  window.SeniverseWeatherWidget('show', {
+    flavor: "bubble",
+    location: "WSKM4Q76FR2E",
+    geolocation: true,
+    language: "zh-Hans",
+    unit: "c",
+    theme: "auto",
+    token: "ba0d4975-d435-4459-b32a-2bb6157bb08d",
+    hover: "enabled",
+    container: "tp-weather-widget"
+  })</script>
 </head>
 <body>
 <div class="all"><h1>风铃源<h1><br>
@@ -55,6 +66,21 @@ p {text-align:center;color:#fff}
 <p style="color:#808080">Hi~ ( • ̀ω•́ )✧ 欢迎来访</p>
 <p style="color:#808080">Copyright © 2016～2021 <a target="_blank" href="https://imlufeng.gitee.io/">ImLuFeng</a> All Rights Reserved.</p>
 <p style="color:#808080">「生命中愿你期待每一次不期而遇的惊喜」</p>
-<script type="text/javascript" src="title.js"></script>
+<script>
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange',
+function() {
+    if (document.hidden) {
+        document.title = '发呆-  (●ˊ◡ˋ●)ﾉ ❤ ' + OriginTitile;
+        clearTimeout(titleTime);
+    } else {
+        document.title = '✧٩(ˊωˋ*)و✧被发现了~ ' + OriginTitile;
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        },
+        2000);
+    }
+});</script>
 </body>
 </html>
