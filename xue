@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>数字资源 - FLY</title>
+    <link rel="apple-touch-icon-precomposed" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_img.png" />
+    <meta name="msapplication-TileImage" content="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_img.png" />
+    <link rel="shortcut icon" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_ico.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes">
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application">
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true">
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app">
+    <!--QQ应用模式-->
+    <link rel="stylesheet" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/bootstrap.min.css">
+    <link rel="stylesheet" id="font-awesome-css" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/font_awesome_free.all.min.css" type="text/css" media="all">
+    <script src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_2847740_mln4fi2pjhk.js"></script>
+    <!-- script src="sou.js"></script-->
+    <link rel="stylesheet" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/style.css">
+    <script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/tongji.js"></script>
+</head>
+
+<body>
+    <!--视频头部背景-->
+    <div class="banner-video">
+        <!--视频来自阿里云首页，有需要请自行更换-->
+        <!--video autoplay loop muted>
+            <source src="https://cdn.jsdelivr.net/gh/5iux/uploads/pic/3840-banner.mp4" type="video/mp4">
+        </video> -->
+        <!--注释掉视频可换成图片版本-->
+        <img src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/background.jpg" alt="">
+        <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
+    </div>
+    <!--topbar开始-->
+    <style>
+        .navbar-toggler svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .navbar-toggler .bi-list-nested {
+            display: none;
+        }
+        
+        .navbar-toggler.collapsed .bi-list-nested {
+            display: block;
+        }
+        
+        .navbar-toggler.collapsed .bi-x {
+            display: none;
+        }
+        
+        .navbar-toggler .bi-x {
+            display: block;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="position: absolute; z-index: 10000;">
+        <a class="navbar-brand" href="/index.html"><img src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo.svg" height="35" style=" margin-left: -10px;" alt="imlufeng.cn和imlufeng.com"></a>
+        <button class="navbar-toggler collapsed" style="border: none; outline: none;" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="bi bi-list-nested" fill="currentColor" id="list-nested">
+                <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 015 11h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm-2-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm-2-4A.5.5 0 011 3h10a.5.5 0 010 1H1a.5.5 0 01-.5-.5z"></path>
+            </svg><span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" id="x">
+                    <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"></path>
+                    <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"></path>
+                </svg><span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html" target="_blank">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/xuexi.html" target="_blank">数字资源</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/learn.html" target="_blank">★中小学★</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jyks.html" target="_blank">教育考试</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rsks.html" target="_blank">人事考试</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ggfw.html" target="_blank">公共服务</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aigc.html" target="_blank">AIGC生成式人工智能</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help.html" target="_blank">食用说明</a>
+                </li>
+		        <li class="nav-item">
+                    <a class="nav-link" href="https://support.qq.com/products/39054" target="_blank">建议反馈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/me.html" target="_blank">关于</a>
+                </li>
+            </ul>
+            <style>
+                #he-plugin-simple {
+                    z-index: 1000;
+                }
+            </style>
+            <div id="he-plugin-simple"></div>
+            <script>
+                WIDGET = {
+                    CONFIG: {
+                        "modules": "01234",
+                        "background": 5,
+                        "tmpColor": "4A4A4A",
+                        "tmpSize": 14,
+                        "cityColor": "4A4A4A",
+                        "citySize": 14,
+                        "aqiSize": 14,
+                        "weatherIconSize": 22,
+                        "alertIconSize": 16,
+                        "padding": "8px 8px 8px 8px",
+                        "shadow": "1",
+                        "language": "auto",
+                        "borderRadius": 5,
+                        "fixed": "false",
+                        "vertical": "middle",
+                        "horizontal": "center",
+                        "key": "b5ef010fdb14440d8a77bfa490520ba4"
+                    }
+                }
+            </script>
+            <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+        </div>
+    </nav>
+    <!--topbar结束-->
+    <div class="container" style="margin-top: 100px; position: relative; z-index: 100;">
+        <!--搜索开始-->
+        <div id="search" class="s-search">
+            <div id="search-list" class="hide-type-list">
+                <div class="search-group group-a s-current" style="padding-left: 20px">
+                    <ul class="search-type">
+                        <li><input checked="" hidden="" type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label for="type-baidu"><span style="color:#3288FE">百度</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-google" value="https://www.google.com.hk/search?hl=zh-CN&q=" data-placeholder="谷歌搜索"><label for="type-google"><span style="color:#3B83FA">G</span><span style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span style="color:#F54231">e</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="必应搜索"><label for="type-bing"><span style="color:#b1870b">必应</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-fsou" value="https://fsoufsou.com/search?q=" data-placeholder="F搜"><label for="type-fsou"><span style="color:#ff5722">F搜</span></label></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm">
+                <input type="text" id="search-text" placeholder="百度一下" style="outline:0" autocomplete="off">
+                <button class="submit" type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;" class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-chayan"></use>
+                    </svg><span></button>
+                <ul id="word" style="display: none;"></ul>
+            </form>
+            <div class="set-check hidden-xs">
+                <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
+            </div>
+        </div>
+        <!--搜索结束-->
+        <!-- #icon-wangluo tsgzyk.cxtc.edu.cn 211.83.177.4/opac/search/simsearch 211.83.177.21 -->
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-kexin"></use>
+                </svg> 主流平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.cnki.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中国知网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://kns.cnki.net/kns/advsearch?dbcode=SCDB" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>旧版检索</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://qikan.cqvip.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>维普期刊</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://wwwv3.cqvip.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>维普新版</span></a></li>
+			<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wanfangdata.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>万方数据</span></a></li>
+			<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://qikan.chaoxing.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>超星期刊</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.duxiu.com/login.jsp" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>读秀学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xueshu.baidu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百度学术</span></a></li>
+            <!-- https://kns.cnki.net/kns8/AdvSearch?dbcode=CJFQ https://kns.cnki.net/kns/brief/result.aspx?dbprefix=scdb -->
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-fenbushi"></use>
+                </svg> ★省级图书馆★</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://zjisa.zjlib.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>浙江图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://gwfw.jxlibrary.net:8000/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江西图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://res.gxlib.org.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>广西图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zslib.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>广东图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.szlib.org.cn/digitalResource/index.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>深圳图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://portal.sclib.org/interlibSSO/main/main.jsp" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>四川图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://elib.cqlib.cn:8081/interlibSSO/main/index.jsp" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>重庆图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://z.library.sh.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>上图专业门户</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-pingtai"></use>
+                </svg> 推荐平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.ucdrs.superlib.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>参考咨询联盟</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.cn-ki.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>iData</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.oalib.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>OALib</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.sstir.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>SSTIR</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.academic-res.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>云端学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://31sanyi.neocities.org/user.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>晨曦</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://lib.shutong2.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>书童图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.xueshu5688.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学府图书馆</span></a></li>
+            <!-- 上图发现 sou.library.sh.cn 学府图书馆www.xue1888.com -->
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhengfu"></use>
+                </svg> 国家级学术文献平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.nlc.cn/web/index.shtml" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>国家图书馆</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.nssd.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>NSSD</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ncpssd.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>NCPSSD</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.nstl.gov.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>NSTL</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.las.ac.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>CAS中科院</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://pubscholar.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PubScholar公益学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.paper.edu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>科技论文在线</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.termonline.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>术语在线</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-anquan"></use>
+                </svg> 查重平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://cx.cnki.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>知网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://check.wanfangdata.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>万方</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://vpcs.fanyu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>维普</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chsi.wanfangtech.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学信网&万方</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://dsa.dayainfo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>超星大雅</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xueshu.baidu.com/usercenter/papercheck/homeindex" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百度学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.paperpass.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PaperPass</span></a></li>
+			<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.paperyy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PaperYY</span></a></li>
+            <!-- 坚果云&万方 https://simidetect.jianguoyun.net.cn/ -->
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-kaifang"></use>
+                </svg> 其他网站</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.x-mol.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>X-MOL</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aminer.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Aminer</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://readpaper.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ReadPaper</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.socolar.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Socolar</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://hammerscholar.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Hammer</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ixueshu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>爱学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zhangqiaokeyan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>掌桥科研</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://doc.paperpass.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>钛学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.puppy-med.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小狗文献</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://qnscholar.gitee.io/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>青柠博客</span></a></li>
+			<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ablesci.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>科研通</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.hi138.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>hi138</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.koovin.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>库问搜索</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xueshu86.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>互助联盟</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://u.xueshu86.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>互助联盟</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://tampermonkey.getpdfnow.com/home/default.aspx" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>文献互助</span></a></li>
+            <!-- 企鹅论文 https://doi.qqsci.com/ 小米学术 https://www.mixueshu.com/ 柠檬文献 http://sci-hub.fan/-->
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-quanqiu"></use>
+                </svg> 镜像 & 海外</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://cn.bing.com/academic" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>必应学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.elsevier.cn/zh-cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Elsevier</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.sciencedirect.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ScienceDirect</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.semanticscholar.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Semantic</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://onlinelibrary.wiley.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Wiley</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.base-search.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Base</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://explore.openalex.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>OpenAlex</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://imlufeng.com/xuexi/explore.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>★ More +</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-huanqiu"></use>
+                </svg> 其他导航站</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://site.sciping.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>科塔学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://academic.wf.pub/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>万方学术导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://nav.guidebook.top/xueshu" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Guidebook</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://cnspub.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>CNS Pub</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ixsdh.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>爱学术导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.scihub.net.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>SciHub学术导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.9312.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小鲸鱼文献</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://panda321.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>熊猫学术</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://scholar.chongbuluo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>虫部落</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://20009.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>格桑花</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.4243.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>大木虫</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://459.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>文献部落</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.sci-hub.ac.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>文献小镇</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.xueshuwu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学术屋</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://489.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>文献下载</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.5638.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>科研宝库</span></a></li>
+            <!-- 备用：学术导航 https://www.xsdh.org/ 皮卡之地 https://www.pkzhidi.xyz/ 毕业论文资源导航 http://by.360xueke.com/ 搞科研导航 http://www.gaokeyan.com/ -->
+            <!-- 失效：思谷搜 https://siguso.com/scholar.html SCI111导航 https://www.sci111.com/ 龙猫导航 http://www.6453.net/ -->
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-wendang"></use>
+                </svg> 图书资源网站</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://shuyi.shenmezhidedu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>书易</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://yuedu.pro/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阅读链</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.shuxiangjia.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>书享家</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://shu.ziyuandi.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>资源帝</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xmsoushu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>熊猫搜书</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.jiumodiary.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>鸠摩搜书</span></a></li>
+			<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://new.shuge.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>书格</span></a></li>
+			<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://imlufeng.com/xuexi/reading.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>★ More +</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 学习资料</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.yuque.com/imlufeng/xuexi/nsdw7b" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>相关推荐</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bkfeng.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>本卡风</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://eureka.mba/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Eureka</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://李颜控.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>李颜控</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.kaoyany.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>考研云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://pankaoyan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>考研云资料</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zhenti.burningvocabulary.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>英语真题在线</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://ztbl.zoooy111.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>英语真题伴侣</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aboutppt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AboutPPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.sandunppt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>三顿PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.pangmenzd.vip/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>旁门左道PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://tuostudy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>图欧</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://wp.yijujinhai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>网盘目录</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xuebapan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学霸盘</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.yeyulingfeng.com/tool/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>夜雨聆风在线</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://tools.miku.ac/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MikuTools</span></a></li>
+            <!-- http://zhishi.oooooooo.vip/ https://file.ksclass.com/ 1.116.161.23:5001 -->
+            <!-- 其他 http://xk.fulink.edu.cn/ https://i-huiyuan.shec.edu.cn/ -->
+        </ul>
+    </div>
+    <!--版权信息开始-->
+    <p class="mt-5 mb-3 text-muted text-center">☆ <a href="/me.html" target="_blank">imlufeng</a> ☆ <a href="https://support.qq.com/products/39054" target="_blank">建议与反馈</a> ☆ <a href="/help.html" target="_blank">使用说明</a> ☆</p>
+    <!--
+作者:D.Young
+主页：https://blog.5iux.cn/
+github：https://github.com/5iux/5iux.github.io
+日期：2021-08-02
+版权所有，请勿删除
+-->
+    <!--版权信息结束-->
+<script>
+    eval(function(e, t, a, c, i, n) {
+        if (i = function(e) {
+                return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(36))
+            }, !"".replace(/^/, String)) {
+            for (; a--;) n[i(a)] = c[a] || i(a);
+            c = [function(e) {
+                return n[e]
+            }], i = function() {
+                return "\\w+"
+            }, a = 1
+        }
+        for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
+        return e
+    }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();', 62, 77, "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute".split("|"), 0, {}));
+</script>
+<script src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/title.js"></script>
+</body>
+</html>
