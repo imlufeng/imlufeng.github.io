@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>中小学教育 - FLY</title>
+    <link rel="apple-touch-icon-precomposed" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_img.png" />
+    <meta name="msapplication-TileImage" content="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_img.png" />
+    <link rel="shortcut icon" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_ico.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes">
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application">
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true">
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app">
+    <!--QQ应用模式-->
+    <link rel="stylesheet" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/bootstrap.min.css">
+    <link rel="stylesheet" id="font-awesome-css" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/font_awesome_free.all.min.css" type="text/css" media="all">
+    <script src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_2847740_mln4fi2pjhk.js"></script>
+    <!-- script src="sou.js"></script-->
+    <link rel="stylesheet" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/style.css">
+    <script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/tongji.js"></script>
+</head>
+<body>
+    <!--视频头部背景-->
+    <div class="banner-video">
+        <!--视频来自阿里云首页，有需要请自行更换-->
+        <!--video autoplay loop muted>
+            <source src="https://cdn.jsdelivr.net/gh/5iux/uploads/pic/3840-banner.mp4" type="video/mp4">
+        </video> -->
+        <!--注释掉视频可换成图片版本-->
+        <img src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/background.jpg" alt="">
+        <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
+    </div>
+    <!--topbar开始-->
+    <style>
+        .navbar-toggler svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .navbar-toggler .bi-list-nested {
+            display: none;
+        }
+        
+        .navbar-toggler.collapsed .bi-list-nested {
+            display: block;
+        }
+        
+        .navbar-toggler.collapsed .bi-x {
+            display: none;
+        }
+        
+        .navbar-toggler .bi-x {
+            display: block;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="position: absolute; z-index: 10000;">
+        <a class="navbar-brand" href="/index.html"><img src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo.svg" height="35" style=" margin-left: -10px;" alt=""></a>
+        <button class="navbar-toggler collapsed" style="border: none; outline: none;" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="bi bi-list-nested" fill="currentColor" id="list-nested">
+                <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 015 11h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm-2-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm-2-4A.5.5 0 011 3h10a.5.5 0 010 1H1a.5.5 0 01-.5-.5z"></path>
+            </svg><span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" id="x">
+                    <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"></path>
+                    <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"></path>
+                </svg><span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html" target="_blank">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/xuexi.html" target="_blank">★数字资源★</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jxgk" target="_blank">2024江西高考</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jyks.html" target="_blank">教育考试</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rsks.html" target="_blank">人事考试</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://lufeng.wss.cc/" target="_blank">物理学习站</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aigc.html" target="_blank">AIGC生成式人工智能</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help.html" target="_blank">食用说明</a>
+                </li>
+		        <li class="nav-item">
+                    <a class="nav-link" href="https://support.qq.com/products/39054" target="_blank">建议反馈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/me.html" target="_blank">关于</a>
+                </li>
+            </ul>
+            <style>
+                #he-plugin-simple {
+                    z-index: 1000;
+                }
+            </style>
+            <div id="he-plugin-simple"></div>
+            <script>
+                WIDGET = {
+                    CONFIG: {
+                        "modules": "01234",
+                        "background": 5,
+                        "tmpColor": "4A4A4A",
+                        "tmpSize": 14,
+                        "cityColor": "4A4A4A",
+                        "citySize": 14,
+                        "aqiSize": 14,
+                        "weatherIconSize": 22,
+                        "alertIconSize": 16,
+                        "padding": "8px 8px 8px 8px",
+                        "shadow": "1",
+                        "language": "auto",
+                        "borderRadius": 5,
+                        "fixed": "false",
+                        "vertical": "middle",
+                        "horizontal": "center",
+                        "key": "b5ef010fdb14440d8a77bfa490520ba4"
+                    }
+                }
+            </script>
+            <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+        </div>
+    </nav>
+    <!--topbar结束-->
+    <div class="container" style="margin-top: 100px; position: relative; z-index: 100;">
+        <!--搜索开始-->
+        <div id="search" class="s-search">
+            <div id="search-list" class="hide-type-list">
+                <div class="search-group group-a s-current" style="padding-left: 20px">
+                    <ul class="search-type">
+                        <li><input checked="" hidden="" type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label for="type-baidu"><span style="color:#3288FE">百度</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-google" value="https://www.google.com.hk/search?hl=zh-CN&q=" data-placeholder="谷歌搜索"><label for="type-google"><span style="color:#3B83FA">G</span><span style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span style="color:#F54231">e</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="必应搜索"><label for="type-bing"><span style="color:#b1870b">必应</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-fsou" value="https://fsoufsou.com/search?q=" data-placeholder="F搜"><label for="type-fsou"><span style="color:#ff5722">F搜</span></label></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm">
+                <input type="text" id="search-text" placeholder="百度一下" style="outline:0" autocomplete="off">
+                <button class="submit" type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;" class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-chayan"></use>
+                    </svg><span></button>
+                <ul id="word" style="display: none;"></ul>
+            </form>
+            <div class="set-check hidden-xs">
+                <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
+            </div>
+        </div>
+        <!--搜索结束-->
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 官方平台</li>
+            <!-- https://www.zxx.edu.cn/ https://xue-test.ykt.eduyun.cn/ -->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://basic.smartedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智慧中小学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.smartedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>国家智慧教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://basic.jx.smartedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江西赣教云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://basic.fj.smartedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>福建中小学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.hbeducloud.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>湖北中小学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zy.szedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>深圳教育云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.gzjyc.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>广州智慧教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://study.dgjy.net/#/kTwelve/index" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>东莞莞易学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mkzkt.bjedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>北京空中课堂</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://smile.shec.edu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>上海微校</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://yun.zjer.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>浙江之江汇</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://basic.zj.smartedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>浙江中小学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.mhjyy.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>杭州教育云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mskzkt.jse.edu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江苏名师课堂</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jlwx.jsnje.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>南京金陵微校</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://online.wxeic.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>无锡锡慧在线</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 优质平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zxxk.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学科网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zujuan.xkw.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>组卷网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jy.wxswvip.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>万向思维</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.tesoon.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>天星教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://book.jb1000.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>世纪金榜</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zhyh.org/ziyuan/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>志鸿优化</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.jyeoo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>菁优网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ti.canpoint.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>全品题舟</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mp.bookln.cn/store.html?shopId=32139&pageCode=c5328871-16d7-437a-b827-4161c0e1a64d#/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小熊图书高中</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mp.bookln.cn/store.html?shopId=32139&pageCode=ae54f536-d4d2-404b-b176-b310b9db4dec#/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小熊图书教学资源</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://h5.szzy.xkpc.vip/resouce" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小熊图书在线</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lxzwedu.com/library-list" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>众望教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.stzy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>试题网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a href='javascript:alert("「微信小程序：理想数图书，选择老师角色」");'><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>理想数图书</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://paper.xesvip.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学而思试卷宝</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.jiaoyanyun.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教研云</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 教学资源站</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://easinote.seewo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>希沃白板</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://enweb.seewo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>希沃网页版</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://k.seewo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>希沃课件库</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ppt.101.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>101教育PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://pie.hitecloud.cn/pie" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>鸿合白板</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a href='javascript:alert("「微信小程序：天星老师好」");'><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>天星教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://go.rongdeji.com/list.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>荣德基</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.rongdeji.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>荣德基</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.timebook.cc/new/cata.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>七彩云课堂</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.youyi100.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>优翼网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wookey.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>吾课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.edutool.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>一度工具</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://nav.xue-meta.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教师导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.44886.com/go" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>不坑老师</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://v3.bsszjc.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>京师慧学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.pep.com.cn/jxzy/xzzq/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>人教教学资源</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.jxeph.com/mainpages/jsys.aspx" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江西教育出版</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://fuwu.jtyedu.com/home" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>金太阳教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.51jiaoxi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教习网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.21cnjy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>21世纪教育网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zujuan.21cnjy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>二一组卷</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xy.mifengjiaoyu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>蜜蜂家校</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xiangpi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>橡皮网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zqy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>正确云</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 课件试卷资源</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.leleketang.com/paper/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>乐乐课堂题库</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.shuxue9.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>数九网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.shuziyuwen.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>数字语文网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www2.zzstep.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中国教育出版</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xinjiaoyu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>新教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.dearedu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>第二教育网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.jxmingsi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>明思e学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://flowus.cn/share/6da481ac-a57b-4214-9ce8-94273bbf2f45" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Andy老师课件帮</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.51zxwkf.net/edu/index.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>第一课件网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.kjzhan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>课件站</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.shijuan1.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>第一试卷网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://shijuan.zww.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中小学试卷</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.1ppt.com/kejian/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>第一PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.k12bbs.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>K12论坛</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.k12shijuan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>K12试卷网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.shaopeiwang.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>少培网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wangkewang.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>网课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.goodkejian.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>好课件吧</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.haokj.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>好课件</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.pptkj.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PPT课件网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xkb1.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>新课标第一网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.szzx100.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江南汇教育网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://bk.cooco.net.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>备课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xj5u.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小学资源网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zk5u.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中考资源网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ks5u.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>高考资源网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.5156edu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>5156语文</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.7cxk.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>7C教育资源网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.renjiaoshe.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教师之家</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lspjy.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>绿色圃</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.5ykj.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>莲山课件</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.eywedu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中小学备课大师</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.ht88.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>育星资源网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://1ydt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>一点通教学网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.hteacher.net/jiaoshi/20221221/392199.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>电子课本PDF</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://m.open.163.com/mobile/free/gb/freelist?id=6519" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>网易公开课</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.shuajuanzi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>刷卷子</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.zhongkao.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中考网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.gaokao.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>高考网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lexueduosi.com/#/category" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>乐学多思</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 教学研修</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.eduyun.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>国家教育资源</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jpk.eduyun.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>精品课</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://1s1k.eduyun.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>一师一课</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.moe.gov.cn/jyb_xxgk/xxgk/neirong/fenlei/kcjc/kcjc_js/jcjs_kcbz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>课程标准</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://px.pep.com.cn/resource.php?mod=index" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>课程标准</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ictr.edu.cn/download_center/ywjy.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>课程教材研究所</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://study.seewoedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>希沃学苑</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://live.yanxiu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>研直播</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://live.jxeduyun.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>赣教云直播</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://basic.jxeduyun.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>赣教云平台</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.jsnje.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>南京智慧教育云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://srsc.gdedu.gov.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>广东教育双融双创</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.sdei.edu.cn/home/html/resources.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>山东鲁教云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.hner.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>河南基础教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ahedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>安徽皖教云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://eps.ynjy.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>云南教育云</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://edu.bestv.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>上海空中课堂Bestv</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.qingjiaosai.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>青教赛</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jiaoxuesai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教学赛</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://qgjxjn.zjnu.edu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教学技能竞赛</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.zgjiaoyan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教研网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.teacherclub.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中国教师研修</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://dasai.cnweike.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>中国微课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zhike.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>指课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.qkwr.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>千课万人</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.tingkew.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>听课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zhav.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>众华听课网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.sp910.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教视网</span></a></li>
+            <!-- 赣教云 http://www.jxeduyun.com/index.html -->
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 职业教育专区</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://vocational.smartedu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>国家智慧职教</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mooc.icve.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智慧职教MOOC</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.icve.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智慧职教</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://www.civte.edu.cn/j/bz.htm" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>职教标准体系</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://vocbook.civte.edu.cn/index" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>教材资源中心</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://le.ouchn.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>终身教育网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jg.class.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>技工教育网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://szyxy.webtrn.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>师资研修院</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://portal.jxslsd.com:4106/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>水利信息门户</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jxslzyxy.jw.chaoxing.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>水利教务系统</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jxslsd.mh.chaoxing.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>水利教学一体化</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://i.chaoxing.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>超星学习通</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://jgyx.jxhrss.gov.cn/jgyxweb/index.html#/index" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江西技工教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://jyt.jiangxi.gov.cn/col/col30362/index.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>江西职业教育</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ourstudy8.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>我们学习吧</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zhijiao.xkw.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学科网AI职教</span></a></li>
+        </ul>
+    </div>
+    <!--版权信息开始-->
+    <p class="mt-5 mb-3 text-muted text-center">☆ <a href="/me.html" target="_blank">imlufeng</a> ☆ <a href="https://support.qq.com/products/39054" target="_blank">建议与反馈</a> ☆ <a href="/help.html" target="_blank">使用说明</a> ☆</p>
+    <!--
+作者:D.Young
+主页：https://blog.5iux.cn/
+github：https://github.com/5iux/5iux.github.io
+日期：2021-08-02
+版权所有，请勿删除
+-->
+    <!--版权信息结束-->
+<script>
+    eval(function(e, t, a, c, i, n) {
+        if (i = function(e) {
+                return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(36))
+            }, !"".replace(/^/, String)) {
+            for (; a--;) n[i(a)] = c[a] || i(a);
+            c = [function(e) {
+                return n[e]
+            }], i = function() {
+                return "\\w+"
+            }, a = 1
+        }
+        for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
+        return e
+    }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();', 62, 77, "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute".split("|"), 0, {}));
+</script>
+<script src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/title.js"></script>
+</body>
+</html>
