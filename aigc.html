@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>AIGC生成式人工智能 - FLY</title>
+    <link rel="apple-touch-icon-precomposed" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_img.png" />
+    <meta name="msapplication-TileImage" content="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_img.png" />
+    <link rel="shortcut icon" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo_ico.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes">
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application">
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true">
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app">
+    <!--QQ应用模式-->
+    <link rel="stylesheet" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/bootstrap.min.css">
+    <link rel="stylesheet" id="font-awesome-css" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/font_awesome_free.all.min.css" type="text/css" media="all">
+    <script src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_2847740_mln4fi2pjhk.js"></script>
+    <!-- script src="sou.js"></script-->
+    <link rel="stylesheet" href="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/style.css">
+    <script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/tongji.js"></script>
+</head>
+<body>
+    <!--视频头部背景-->
+    <div class="banner-video">
+        <!--视频来自阿里云首页，有需要请自行更换-->
+        <!--video autoplay loop muted>
+            <source src="https://cdn.jsdelivr.net/gh/5iux/uploads/pic/3840-banner.mp4" type="video/mp4">
+        </video> -->
+        <!--注释掉视频可换成图片版本-->
+        <img src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/background.jpg" alt="">
+        <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
+    </div>
+    <!--topbar开始-->
+    <style>
+        .navbar-toggler svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .navbar-toggler .bi-list-nested {
+            display: none;
+        }
+        
+        .navbar-toggler.collapsed .bi-list-nested {
+            display: block;
+        }
+        
+        .navbar-toggler.collapsed .bi-x {
+            display: none;
+        }
+        
+        .navbar-toggler .bi-x {
+            display: block;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="position: absolute; z-index: 10000;">
+        <a class="navbar-brand" href="/index.html"><img src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/logo.svg" height="35" style=" margin-left: -10px;" alt=""></a>
+        <button class="navbar-toggler collapsed" style="border: none; outline: none;" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="bi bi-list-nested" fill="currentColor" id="list-nested">
+                <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 015 11h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm-2-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm-2-4A.5.5 0 011 3h10a.5.5 0 010 1H1a.5.5 0 01-.5-.5z"></path>
+            </svg><span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" id="x">
+                    <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"></path>
+                    <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"></path>
+                </svg><span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html" target="_blank">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/xuexi.html" target="_blank">★数字资源★</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/learn.html" target="_blank">中小学</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jyks.html" target="_blank">教育考试</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rsks.html" target="_blank">人事考试</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ggfw.html" target="_blank">公共服务</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help.html" target="_blank">食用说明</a>
+                </li>
+		        <li class="nav-item">
+                    <a class="nav-link" href="https://support.qq.com/products/39054" target="_blank">建议反馈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/me.html" target="_blank">关于</a>
+                </li>
+            </ul>
+            <style>
+                #he-plugin-simple {
+                    z-index: 1000;
+                }
+            </style>
+            <div id="he-plugin-simple"></div>
+            <script>
+                WIDGET = {
+                    CONFIG: {
+                        "modules": "01234",
+                        "background": 5,
+                        "tmpColor": "4A4A4A",
+                        "tmpSize": 14,
+                        "cityColor": "4A4A4A",
+                        "citySize": 14,
+                        "aqiSize": 14,
+                        "weatherIconSize": 22,
+                        "alertIconSize": 16,
+                        "padding": "8px 8px 8px 8px",
+                        "shadow": "1",
+                        "language": "auto",
+                        "borderRadius": 5,
+                        "fixed": "false",
+                        "vertical": "middle",
+                        "horizontal": "center",
+                        "key": "b5ef010fdb14440d8a77bfa490520ba4"
+                    }
+                }
+            </script>
+            <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+        </div>
+    </nav>
+    <!--topbar结束-->
+    <div class="container" style="margin-top: 100px; position: relative; z-index: 100;">
+        <!--搜索开始-->
+        <div id="search" class="s-search">
+            <div id="search-list" class="hide-type-list">
+                <div class="search-group group-a s-current" style="padding-left: 20px">
+                    <ul class="search-type">
+                        <li><input checked="" hidden="" type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label for="type-baidu"><span style="color:#3288FE">百度</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-google" value="https://www.google.com.hk/search?hl=zh-CN&q=" data-placeholder="谷歌搜索"><label for="type-google"><span style="color:#3B83FA">G</span><span style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span style="color:#F54231">e</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="必应搜索"><label for="type-bing"><span style="color:#b1870b">必应</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-fsou" value="https://fsoufsou.com/search?q=" data-placeholder="F搜"><label for="type-fsou"><span style="color:#ff5722">F搜</span></label></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm">
+                <input type="text" id="search-text" placeholder="百度一下" style="outline:0" autocomplete="off">
+                <button class="submit" type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;" class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-chayan"></use>
+                    </svg><span></button>
+                <ul id="word" style="display: none;"></ul>
+            </form>
+            <div class="set-check hidden-xs">
+                <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
+            </div>
+        </div>
+        <!--搜索结束-->
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 国内AIGC平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://yiyan.baidu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百度文心一言</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xinghuo.xfyun.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>讯飞星火</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://tongyi.aliyun.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阿里通义千问</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://hunyuan.tencent.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>腾讯混元助手</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.360.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>360智脑</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://home.tiangong.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>昆仑天工AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.doubao.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>抖音豆包</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://wukong.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小悟空</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatglm.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智谱清言ChatGLM</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://kimi.moonshot.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Kimi.ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://hailuoai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>海螺问问AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://metaso.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>秘塔AI搜索</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://techday.sensetime.com/list" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>商汤大模型</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.baichuan-ai.com/home" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百川大模型</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.mathgpt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学而思MathGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zaiwen.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>在问</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 国外AIGC平台</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.openai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://openai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>OpenAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://claude.ai/chats" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Claude</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.bing.com/new" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>新必应</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bard.google.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>谷歌Bard</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://poe.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>POE</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://stability.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Stable Diffusion</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.midjourney.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Midjourney</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> AIGC导航站</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai-bot.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI工具集</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aiyjs.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI研究所</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aihub.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AIHUB</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zmthome.com/ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI工具导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ainav.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI导航网</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aiwht.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI万花筒</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://box123.io/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Box123.io</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://studyhard.eu.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>DAC导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.deepdhai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>深度AI导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.uxmap.cn/page/#/uxmap/preview?id=38218" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>UXmap AI导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.waytoagi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WaytoAGI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aiwaytools.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI智式</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aigc.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>aigc导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://123.lingduquan.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ai网址导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.jyshare.com/ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>菜鸟工具AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aididai.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI地带</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.yeyulingfeng.com/tools/chatgpt/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>夜雨聆风</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lovejay.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Jay资源库</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.quickso.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Quickso AI导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatgpt.quickso.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Quickso</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://yyyy.gay/article/34" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Apricity</span></a></li>
+            <!-- https://gurbk.github.io/ https://pro.gleeze.com/ https://fun.gleeze.com/ https://88lin.eu.org/ -->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://cc.ai55.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>cc.ai55.cc</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/xx025/carrot" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>cc.ai55.cc</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://lzw.me/x/chatgpt-sites/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>lzw</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gitee.com/wlzwme/chatgpt-sites" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>lzw</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/LiLittleCat/awesome-free-chatgpt" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>LiLittleCat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://share.freegpts.org/list" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>FreeGPTs</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/runningcheese/Awesome-ChatGPT" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>奔跑中的奶酪</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wangwangit.com/ChatGPT%20%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C%E7%BD%91%E7%AB%99/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>一只会飞的旺旺</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xiaoermeizai.com/569/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小而美哉</span></a></li>
+            <!-- http://ai.mxnf.one/ -->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ki6j1b0d92h.feishu.cn/wiki/Kiz6wbJQeiO5SpkVFuhcqC3mnlg" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI资源百宝箱</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai2045.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI2045</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ctoutiao.com/aiapps/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI先锋官</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.amz123.com/ai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AMZ123</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.zhaoyeqing.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>照夜清的AI小宇宙</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.sandunppt.com/indexs" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>三顿</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/LangLangShanDeNanKe/chatgpt" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>浪浪山的南柯</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://axutongxue.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阿虚同学</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wangdu.site/software/ai/1549.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>文武科技社</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://hao.uisdc.com/ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>优设AI导航</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://17yongai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>一起用AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://sownai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>SownAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.kulayu.com/chatgpt.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>酷啦鱼</span></a></li>
+            <!-- https://www.mydyjs.com/gpt.html -->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatgpts.ninvfeng.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ninvfeng</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.spsa.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>spsa角马</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.yjpoo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>映技派</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.toolify.ai/zh/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Toolify</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://dnipkggqxh.feishu.cn/wiki/YTIUwM6Vmij4IQkSm9PctPWunIb" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI产品榜</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> 类ChatGPT站点</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.sparkaigf.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Spark AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatnio.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Chat Nio</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.a0.chat/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI百晓生</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.cdnai.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>CDN Ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://599c.ckai.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>FineTBot</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.chatbro.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatBro</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatplus.buzz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatPlus</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat86.co/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Chat8</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://cat2.imiku.me/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Miku文心</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.yucongming.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>鱼聪明AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.imyai.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>IMYAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://link3.cc/imyai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>IMYAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://share.imyai.top/list" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>IMYAI</span></a></li>
+            <!-- https://chat.zhile.io/auth/login?v=5 https://chat-shared2.zhile.io/shared.html-->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.yeyulingfeng.com/tools/gpt" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>夜雨聆风</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat18.aichatos.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AIchatOS</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat12.aichatos.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AIchatOS</span></a></li>
+            <!-- https://c.binjie.fun/ https://c2.binjie.fun/ -->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://site.easygpt.work/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>EASYGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://site.eqing.tech/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>EASYGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat1688.xyz/list" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Choose-car</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.wangzai.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>一只会飞的旺旺</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://dwai.life/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>大巫先生</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.sandunppt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>三顿</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://fastgpt.in/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>FastGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.kbgpt.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>KBAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.59ip.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>果核剥壳 氮气AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xiake.pro/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>虾壳Gemini</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://brainstorm.cool/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Brainstorm AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.duomexing.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>多么行</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://7wu1.voice767.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>灵动AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.ashuiai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阿水AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://nb.feixue666.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阿水AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://sharedchat.fun/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>RawChat公益站</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://rawchat.biz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>RawChat三元站</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://sharedchat.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>RawChat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://rawchat.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>RawChat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.rawchat.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>RawChat直连站</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.rawchat.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>陈蛋蛋AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://2.openai999.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智慧未来</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://123mindmap.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>123MindMap</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://h1.h5.fj.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智慧未来</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.tishi.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI提示语</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gpt.vipsrc.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>gpt.vipsrc</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://shell-gpt.neocities.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Shell-GPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://api.shellgpt.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>壳聊API</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.mashaojie.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>mashaojie</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.jony4.vip/zh" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatBot UI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.wochat.vip/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WoChat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aibang.run/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI帮个忙</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://newbing.yejin.online/web/NewBingGoGo.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>NewBingGoGo</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://replit.nbing.eu.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Bing AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bingai-csb.zklcdc.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Bing AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bingai-az.zklcdc.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Bing AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bingai.zklcdc.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Bing AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bing.dili204.com/web/#/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Bing AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.poevel.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百晓生Poevel</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gptchinese.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatGPT Chinese</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aigcfun.com/app-download" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI EDU</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai-center.zhihuishu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智慧树 知到AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.chagpt.fun/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>零零GPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://6.00chatgpt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>零零GPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://1888ai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>灵犀百通</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.sanshugpt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>三叔软件</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://app.iswl.one/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>iswl.one</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://op1.mxnf.club/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>mxnf.club</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://cs1.mxnf.life/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>mxnf.life</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://g1.iswl.one/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>iswl.one</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.ddcat.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>DDCAT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aiplus.pw" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AIPlus</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.checkvip.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PassAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.52amz.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AMZ Chat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://helloai.wiki/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Hello AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gptgod.online/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>GPT-GOD</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mofa.si/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>魔法司</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://labs.kagi.com/fastgpt" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>kagi fastgpt</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gptgo.ai/?hl=zh" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>GPTGO.AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://gpt.zw7.lol/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>TDChat</span></a></li>
+            <!-- http://chats.zw7.lol/ http://www.tdchat.pro/ http://t-d.chat http://tdchat.site http://tdchatvip.us/ http://tdvip.us/ -->
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://tdchat.uk/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>TDChat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.geekgpt.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>GeekGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://dz.wanchatgpt.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>知晓AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatgai.lovepor.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatGAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chat.coolai.vip/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>CoolAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.gnomic.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Gnomic</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://home.cutim.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小白AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://home.xbaichat.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小白AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://use.gogpt.site/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小白AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://iii.ge/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小天</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.chatgptsb.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小天AI助手</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gy.chatgptsb.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>LobeHub</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://index.shellgpt.link/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>壳聊ShellGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://a.weexai.site/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WeexAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://share.wendabao-b.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>wendabao</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://openai.mbmzone.com/mbm-gpt/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MBM OPENAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.accn.link/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>故人的AI助理</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> AI绘图</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.mewx.art/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MewXAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://tusiart.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>吐司</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.seaart.me/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>海艺</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.liblib.art/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>LiblibAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.vegaai.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Vega AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wujieai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>无界AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://dreamina.jianying.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>抖音剪映Dreamina</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://d.design/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>堆友</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.esheep.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>esheep</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://leonardo.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Leonardo.ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://editor.fusionbrain.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Fusion Brain</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://yige.baidu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百度文心一格</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://wanxiang.aliyun.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阿里通义万相</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zenvideo.qq.com/image/create" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>腾讯智影</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://civitai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Civitai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aiart.chuangkit.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>创客贴AI画匠</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.gaoding.com/ai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>稿定AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.gaituya.com/aiimg/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>改图鸭</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://huohuaai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Spark火花AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://miaohua.sensetime.com/zh-CN" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>商汤秒画</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://picwish.cn/ai-art-generator" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>佐糖AI绘图</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://storybird.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>StoryBird.AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://img.logosc.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>改图神器</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.whee.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WHEE</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://desai.art/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>DESAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://fal.ai/models" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>fal.ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://mj.bandeyu.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Midjourney Bandeyu</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://portal.yjai.art/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>意间AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://6pen.art/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>6pen Art</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.eqmj.cc/enter" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>EQMJ</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lanrui-ai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>揽睿星舟</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://clipdrop.co/generative-fill" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Clipdrop.co</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> AI + 文档/写作/创作</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://askwise.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Askwise</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.pandagpt.io/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PandaGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.wps.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WPS AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://workspace.dingtalk.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>钉钉个人版</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://sciai.las.ac.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>星火科研助手</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://zhiwen.xfyun.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>讯飞智文</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://peiyin.xunfei.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>讯飞智作</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://study.gptnb.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>GPT学术优化</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://mathgptpro.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MathGPTPro</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.explainpaper.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Explainpaper</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.notion.so/product/ai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Notion AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://novelai.net/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>NovelAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.copy.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Copy.AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://motion.yoo-ai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MotionGo ChatPPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatexcel.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatExcel</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ppt.sankki.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Sankki闪击PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.mindshow.fun/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MindShow</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://lightpdf.cn/chatdoc" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>轻闪PDF ChatDoc</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://gezhe.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>歌者PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.x-design.com/ppt/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>美图AI PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lgppt.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>灵感PPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatwithpaper.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatWithPaper</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://read.youdao.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>有道速读</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aicenter.youdao.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>网易有道子曰</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wanzhi01.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>万知</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://smartread.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>司马阅</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aminer.cn/chat/g/explain" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Aminer AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.writingo.net/document" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>火山写作</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.heyfriday.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>HeyFriday</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://wen.mobvoi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>奇妙文</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.mypitaya.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>火龙果</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.xiezuocat.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>秘塔写作猫</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://effidit.qq.com/demo" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>腾讯Effidit</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ibiling.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>笔灵写作</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://shutu.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>TreeMind树图</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.lightai.com.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>光点红</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://bibigpt.co/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>BibiGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://shenyandayi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>深言达意</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://jiuge.thunlp.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>九歌</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aichpoem.net/#/shisanbai/poem" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI作诗</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.laihua.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>来画</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai.kezhan365.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>万彩AI</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> AI应用/扩展/插件</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://monica.im/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Monica</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://lemurbrowser.com/app/zh/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Lemur Browser</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.wetab.link/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WeTab</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/akl7777777/ShellGPT" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ShellGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatgpt-sidebar.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Sider sider.ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/chathub-dev/chathub" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatHub</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatboxai.app/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatBox</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/Bin-Huang/chatbox" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatBox</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/sunner/ChatALL" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatALL chatall.ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/lencx/ChatGPT" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>lencx ChatGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://app.nofwl.com/zh-CN/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>NoFWL</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.editgpt.app/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>editGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://tools.zmo.ai/webchatgpt" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>WebChatGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.pdfgear.com/pdf-copilot/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PDFgear</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.ai-anywhere.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>灵羽助手</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ai0x0.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI0x0</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://flowgpt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>FlowGPT</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> AI社区 开放平台 Prompt学习</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://modelnet.ai/homepage" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ModelNet</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.huggingface.co/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Hugging Face</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://modelscope.cn/home" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Model Scope</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://open.bigmodel.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>智谱AI开放平台</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://xihe.mindspore.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>昇思大模型平台</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://api.minimax.chat/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MiniMx开放平台</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://intern-ai.org.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>书生通用大模型</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://openapi.mobvoi.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>序列猴子开放平台</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.coze.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Coze 扣子</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.deepseek.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>DeepSeek深度求索</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zelinai.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ZelinAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.langboat.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>澜舟孟子大模型</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.stepfun.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>阶跃星辰Stepfun</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.suno.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Suno AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://replicate.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Replicate</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://lmsys.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>LMSYS Org</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://aistudio.google.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Google AI Studio</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://perplexity.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Perplexity AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ki6j1b0d92h.feishu.cn/wiki/wikcnAFcEccJ5iXiU8MRntc2Vyb" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI智库</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://awesome-chatgpt-api.top/cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Awesome ChatGPT API</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.aishort.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI Short</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.explainthis.io/zh-hans/chatgpt" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ExplainAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://learningprompt.wiki/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Learning Prompt</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://learnprompting.org/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Learn Prompting</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://ethereal-ptarmigan-f4d.notion.site/Advanced-ChatGPT-Full-Guide-0d57a8f109e14b869828e54e5f804be3" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Advanced ChatGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://learn.deeplearning.ai/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>DeepLearning.AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://prompting.wobcw.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>学习提示</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://promptperfect.jinaai.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>PromptPerfect</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://prompts.fresns.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatGTP引导语</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.cluebenchmarks.com/superclue_open.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>SuperCLUE</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/dongyubin/Free-AppleId-Serve" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Free-AppleId-Serve</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/adams549659584/go-proxy-bingai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>go-proxy-bingai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://minigpt-4.github.io/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>MiniGPT-4</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://open-assistant.io" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>OpenAssistant</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.steamship.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>Steamship</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://vercel.com/templates/ai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>play.vercel.ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://chatgpt-qq.lss233.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ChatGPT for Bot</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://flowgpt.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>FlowGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://github.com/xxxily/hello-ai" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>hello-ai</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://llama.family/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>LLaMA2 Chatbot</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://api2d.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>API2D</span></a></li>
+        </ul>
+        <ul class="mylist row">
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shujuku"></use>
+                </svg> Paid Service</li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://key.dwai.life/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>大巫先生</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://vip.ilovechatgpt.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>IMYAI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://aishop.wiki/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>AI工具社</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://www.zheplus.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>百晓生someID</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://backup.aihomego.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小白AI</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://fk.shellgpt.top/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>ShellGPT</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://fk.xt666.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>小天</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://fk.fq.mk/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>fk.fq.mk</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="http://shop.zw7.lol/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>TDChat</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://88.mxnf.xyz/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>mxnf.xyz</span></a></li>
+            <li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="https://88.mxnf.life/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qukuai"></use>
+                    </svg><span>mxnf.life</span></a></li>
+        </ul>
+    </div>
+    <!--版权信息开始-->
+    <p class="mt-5 mb-3 text-muted text-center">☆ <a href="/me.html" target="_blank">imlufeng</a> ☆ <a href="https://support.qq.com/products/39054" target="_blank">建议与反馈</a> ☆ <a href="/help.html" target="_blank">使用说明</a> ☆</p>
+    <!--
+作者:D.Young
+主页：https://blog.5iux.cn/
+github：https://github.com/5iux/5iux.github.io
+日期：2021-08-02
+版权所有，请勿删除
+-->
+    <!--版权信息结束-->
+<script>
+    eval(function(e, t, a, c, i, n) {
+        if (i = function(e) {
+                return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(36))
+            }, !"".replace(/^/, String)) {
+            for (; a--;) n[i(a)] = c[a] || i(a);
+            c = [function(e) {
+                return n[e]
+            }], i = function() {
+                return "\\w+"
+            }, a = 1
+        }
+        for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
+        return e
+    }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();', 62, 77, "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute".split("|"), 0, {}));
+</script>
+<script src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/title.js"></script>
+</body>
+</html>
