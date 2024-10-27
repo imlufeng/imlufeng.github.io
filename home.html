@@ -43,7 +43,7 @@ a {
   </style>
 <script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/tongji.js"></script>
 </head>
-<body>
+<body id="nv_forum" class="pg_viewthread" onkeydown="if(event.keyCode==27) return false;" style="height: 700px; margin: 0 auto;">
 <article>
 <div>
 <h2 id="慕云千里-20241027-最后更新"><strong>慕云千里 · 暮云千里（2024.10.27最后更新）</strong><a class="headerlink" href="https://imlufeng.com/" title="Permanent link"> </a></h2>
@@ -75,7 +75,11 @@ a {
 </blockquote>
 </div>
 </article>
-<div class="no-print" id="darkmode-container" style="position: fixed; left: -17px; bottom: 25px; cursor: pointer; z-index: 2147483647; user-select: none;"><div id="darkmode-button" style="width: 32px;height: 32px;background: #fff;border:1px solid #f6f6f6;display: flex;align-items: center;justify-content: center;border-radius: 50%;position: relative;"></div>
+<div class="no-print" id="darkmode-container" style="position: fixed; left: -17px; bottom: 25px; cursor: pointer; z-index: 2147483647; user-select: none;">
+<div id="darkmode-button" style="width: 32px;height: 32px;background: #fff;border:1px solid #f6f6f6;display: flex;align-items: center;justify-content: center;border-radius: 50%;position: relative;"></div>
 <script type="text/javascript" src="https://fly-1257404465.cos.ap-guangzhou.myqcloud.com/static/title.js"></script>
+<script type="text/javascript">
+        (function() {var coreSocialistValues = ["富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善"], index = Math.floor(Math.random() * coreSocialistValues.length);document.body.addEventListener('click', function(e) {if (e.target.tagName == 'A') {return;}var x = e.pageX, y = e.pageY, span = document.createElement('span');span.textContent = coreSocialistValues[index];index = (index + 1) % coreSocialistValues.length;span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ff6651; top: ', y - 20, 'px; left: ', x, 'px;'].join('');document.body.appendChild(span);animate(span);});function animate(el) {var i = 0, top = parseInt(el.style.top), id = setInterval(frame, 16.7);function frame() {if (i > 180) {clearInterval(id);el.parentNode.removeChild(el);} else {i+=2;el.style.top = top - i + 'px';el.style.opacity = (180 - i) / 180;}}}}());
+    </script>
 </body>
 </html>
